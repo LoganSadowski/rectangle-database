@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/info.css">
+    <script src="/info.js" defer></script>
+    <title>Info</title>
+</head>
+<body>
+    <center>
+        <header th:if="${editing == true}" id="rectangleName" th:text="${info.name}"></header>
+        <header th:unless="${editing == true}" id="rectangleName"></header>
+    </center>
+
+    <div id="infoBox">
+        <center><div id="rectangle"></div></center>
+        <div id="data">
+            <form th:if="${editing == true}" method="post">
+                <fieldset>
+                    <label for="name">Name: </label>
+                    <input id="name" name="name" type="text" th:value="${info.name}"> <br>
+                    <label for="width">Width: </label>
+                    <input id="width" name="width" type="number" th:value="${info.width}"> <br>
+                    <label for="height">Height: </label>
+                    <input id="height" name="height" type="number" th:value="${info.height}"> <br>
+                    <label for="color">Color: </label>
+                    <input id="color" name="color" type="color" th:value="${info.color}"> <br>
+                </fieldset>
+                <button action="@{'rectangles/edit?id=' + ${id}}" id="confirm" type="submit">Edit</button>
+            </form>     
+
+            <form th:unless="${editing == true}" method="post">
+                <fieldset>
+                    <label for="name">Name: </label>
+                    <input id="name" name="name" type="text"> <br>
+                    <label for="width">Width: </label>
+                    <input id="width" name="width" type="number"> <br>
+                    <label for="height">Height: </label>
+                    <input id="height" name="height" type="number"> <br>
+                    <label for="color">Color: </label>
+                    <input id="color" name="color" type="color"> <br>
+                </fieldset>
+                <button action="rectangles/create" id="confirm" type="submit">Create</button>
+            </form> 
+            <form action="/rectangles/cancel"><button id="cancel" type="submit" value="cancel">Cancel</button></form> 
+        </div>     
+    </div>
+</body>
+</html>

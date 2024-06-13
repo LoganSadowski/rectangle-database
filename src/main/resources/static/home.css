@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(49,49,49);
+    margin: 0;
+}
+
+#headerBox {
+    background-color: rgb(74,74,74);
+    color: rgb(214,125,0);
+    font-size: x-large;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 20px;
+    box-shadow: 0 0 5px black;
+}
+
+table {
+    margin: auto;
+    margin-top: 75px;
+    background-color: rgb(74,74,74);
+    color: rgb(197,197,197);
+    border-collapse: collapse;
+    text-align: center;
+}
+
+a {
+    color: rgb(197,197,197);
+}
+
+th, .numCol {
+    color: rgb(214,125,0);
+}
+
+th, td {
+    width: 150px;
+    max-width: 200px;
+    font-family:Arial, Helvetica, sans-serif;
+    border: 5px solid rgb(49,49,49);
+    padding: 5px;  
+    overflow: hidden;
+}
+
+.numCol {
+    width: 30px;
+}
+
+.delete {
+    color: red;
+}
+
+/* .delete:hover {
+    cursor: pointer;
+    text-decoration: underline;
+} */
+
+#newRow {
+    margin: 20px;
+    background-color: rgb(214,125,0);
+    color: rgb(49,49,49);
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-weight: bold;
+}
+
+#newRow:hover {
+    cursor: pointer;
+    background-color: rgb(174, 101, 0);
+}
+

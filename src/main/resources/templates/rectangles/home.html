@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Rectangles</title>
+</head>
+<body>
+    <div id="headerBox">
+       <header>Rectangle Database</header> 
+    </div>
+    
+    <table>
+        <tr><th class="numCol"></th><th>Name</th><th>Color</th><th></th></tr>
+        <div th:each="rectangle:${recs}">
+            <tr>
+                <td class="numCol" th:text="${rectangle.id}"></td>
+                <td><a th:href="@{'rectangles/edit?id=' + ${rectangle.id}}" th:text="${rectangle.name}"></a></td>
+                <td th:text="${rectangle.color}"></td>
+                <td><a class="delete" th:href="@{'rectangles/delete?id=' + ${rectangle.id}}">Delete</a></td>
+            </tr>
+        </div>
+    </table>
+    <center><form action="/rectangles/create"><button id="newRow" type="submit" value="newRow">New Rectangle</button></form></center>
+    
+</body>
+</html>

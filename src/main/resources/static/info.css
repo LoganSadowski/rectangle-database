@@ -1,0 +1,89 @@
+body {
+    background-color: rgb(49,49,49);
+    margin: 0;
+}
+
+#rectangleName {
+    margin: 35px;
+    min-height: 35px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:xx-large;
+    color: rgb(214,125,0);
+}
+
+#infoBox {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 75px; 
+    width: 600px;
+    min-height: 500px;
+    height: auto;
+    background-color: rgb(74,74,74);
+    border-radius: 8px;
+    font-family:Arial, Helvetica, sans-serif;
+    box-shadow: 0 0 8px black;
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    /* position: relative; */
+}
+
+
+#rectangle {
+    margin: 20px;
+}
+
+fieldset {
+    margin-left: 30px;
+    border: none;
+}
+
+label {
+    color: rgb(214,125,0);
+}
+
+input {
+    height: 20px;
+    width: 150px;
+}
+
+#cancel, #confirm {
+    width: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 20px;
+    font-size:large;
+}
+
+#cancel {
+    float: left;
+    margin-left: 40px;
+    background-color: rgb(49,49,49);
+    color: rgb(197,197,197);
+}
+
+#cancel:hover {
+    cursor: pointer;
+    background-color: rgb(31, 31, 31);
+}
+
+#confirm {
+    float: right;
+    margin-right: 40px;
+    background-color: rgb(214,125,0);
+    color: rgb(49,49,49);
+}
+
+#confirm:hover {
+    cursor: pointer;
+    background-color: rgb(174, 101, 0);
+}
+
+#data {
+    max-width: 600px;
+}
+
